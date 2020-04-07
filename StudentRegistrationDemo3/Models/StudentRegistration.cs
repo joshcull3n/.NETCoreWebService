@@ -15,16 +15,6 @@ namespace StudentRegistrationDemo3.Models
             StudentList = new List<Student>();
         }
 
-        public void Add(Student student)
-        {
-            StudentList.Add(student);
-        }
-
-        public List<Student> GetAllStudents()
-        {
-            return StudentList;
-        }
-
         public static StudentRegistration GetInstance()
         {
             if (StdReg == null)
@@ -36,6 +26,16 @@ namespace StudentRegistrationDemo3.Models
             {
                 return StdReg;
             }
+        }
+
+        public void Add(Student student)
+        {
+            StudentList.Add(student);
+        }
+
+        public List<Student> GetAllStudents()
+        {
+            return StudentList;
         }
 
         public string Remove(string RegistrationNumber)
